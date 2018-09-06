@@ -1,0 +1,24 @@
+rabbitmq-plugins.bat enable rabbitmq_management 查询MQServer实例
+
+net stop RabbitMQ && net start RabbitMQ重启MQ
+
+rabbitmqctl.bat list_users 查询当前用户
+
+rabbitmqctl.bat add_user username password 添加用户
+
+rabbitmqctl.bat set_user_tags username 角色信息（下面情况）
+
+(1) 超级管理员(administrator)
+可登陆管理控制台(启用management plugin的情况下)，可查看所有的信息，并且可以对用户，策略(policy)进行操作。
+(2) 监控者(monitoring)
+可登陆管理控制台(启用management plugin的情况下)，同时可以查看rabbitmq节点的相关信息(进程数，内存使用情况，磁盘使用情况等) 
+(3) 策略制定者(policymaker)
+可登陆管理控制台(启用management plugin的情况下), 同时可以对policy进行管理。
+(4) 普通管理者(management)
+仅可登陆管理控制台(启用management plugin的情况下)，无法看到节点信息，也无法对策略进行管理。
+(5) 其他的
+无法登陆管理控制台，通常就是普通的生产者和消费者
+
+rabbitmqctl.bat change_password username password 修改密码
+
+rabbitmqctl.bat delete_user username 删除用户
