@@ -1,0 +1,11 @@
+server:
+  port: 8088
+
+eureka:
+  instance:
+    hostname: my1
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://my2:8077/eureka/
