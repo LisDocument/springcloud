@@ -1,7 +1,7 @@
 package com.hellozq.configclient.service;
 
 import com.hellozq.common.vo.MenuVo;
-import com.hellozq.common.vo.Result;
+import com.hellozq.common.Result;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

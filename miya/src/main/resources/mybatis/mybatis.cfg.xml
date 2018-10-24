@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+    <settings>
+        <setting name="cacheEnabled" value="true" /><!-- 二级缓存开启 -->
+        <!-- 设置超时时间，它决定驱动等待数据库响应的秒数 -->
+        <setting name="defaultStatementTimeout" value="3000"/>
+        <!-- 是否开始驼峰明明规则，从经典数据库列名A_COLUMN换成aCOLUMN -->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!-- 是否允许jdbc自动生成主键-->
+        <setting name="useGeneratedKeys" value="true"/>
+    </settings>
+
+</configuration>

@@ -1,4 +1,4 @@
-package com.hellozq.common.vo;
+package com.hellozq.common;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;

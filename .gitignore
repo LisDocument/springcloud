@@ -4,3 +4,4 @@ target/
 *.log
 *.iml
 .settings/
+/config_item/

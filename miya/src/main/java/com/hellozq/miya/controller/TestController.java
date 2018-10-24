@@ -1,9 +1,12 @@
 package com.hellozq.miya.controller;
 
+import com.hellozq.common.vo.UserVo;
+import com.hellozq.miya.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
+
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -20,14 +23,28 @@ public class TestController {
     @Autowired
     private RestTemplate restTemplate;
 
-    @RequestMapping("/hi")
+    @Autowired
+    private UserDao userDao;
+
+    @GetMapping("/hi")
     public String callHome(){
 
         return "miya:"+restTemplate.getForObject("http://localhost:8988/provide", String.class);
     }
 
-    @RequestMapping("/provide")
+    @GetMapping("/provide")
     public String provide(){
         return "来自miya的接口";
     }
+
+    @PostMapping("/add")
+    public int addUser(@RequestBody UserVo userVo){
+        return userDao.insert(userVo);
+    }
+
+    @GetMapping()
+    public List<UserVo> findAllUser(){
+        return userDao.selectUsers();
+    }
+
 }

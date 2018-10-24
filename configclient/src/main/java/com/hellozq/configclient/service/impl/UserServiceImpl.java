@@ -1,6 +1,6 @@
 package com.hellozq.configclient.service.impl;
 
-import com.hellozq.common.vo.Result;
+import com.hellozq.common.Result;
 import com.hellozq.common.vo.UserVo;
 import com.hellozq.configclient.service.UserService;
 import lombok.extern.slf4j.Slf4j;
